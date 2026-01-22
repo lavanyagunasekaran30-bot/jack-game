@@ -9,7 +9,7 @@ interface GameEngineProps {
 
 const GameEngine: React.FC<GameEngineProps> = ({ onGameOver }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const requestRef = useRef<number>();
+  const requestRef = useRef<number | null>(null);
   
   const scoreRef = useRef(0);
   const gameSpeedRef = useRef(CONST.GAME_SPEED_START);
